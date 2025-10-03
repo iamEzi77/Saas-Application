@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  position: relative;
+  color: rgb(0, 0, 0);
+  padding: 1rem 2rem;
+  border: 1px solid #000000;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BackIcon{
+  position: absolute;
+  right: 80%;
+  top: 50%;
+  transform: translateY(-50%); /* vertically center */
+  cursor: pointer;
+
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
