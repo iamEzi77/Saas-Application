@@ -1,12 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import DashBoard from './page/Dashboard';
 import Navbar from './Components/Navbar';
 import Sidebar from "./Components/SideBar";
-import Equipment from "./page/Equipment/Equipment";
 import EquipmentView from './page/Equipment/EquipmentView';
 import EquipmentCategories from './page/Equipment/EquipmentCategories';
-import PreventiveMaintenance from './page/PreventiveMaintenance';
-import DashBoard from './page/Dashboard';
+import Maintenace from "./page/PreventiveMaintenance/Maintenance-Requests"
+import PreventiveMaintenance from "./page/PreventiveMaintenance/PreventiveMaintenance";
+import Safety from './page/safety/Safety'; 
+import UserManagement from './page/Team Management/UserManagment';
+import TeamManagement from "./page/Team Management/TeamManagment";
+import Training from "./page/Team Management/Training"
+import AreaOperation from "./page/Production/AreaOperation"
+import OperationSetup from "./page/Production/OperationSetup"
+import PartsViewAll from './page/Parts/ViewAll';
+import PartConfiguration from "./page/Parts/Configuration"
+import SuppliersViewAll from './page/suppliers/View';
+import DocumentViewAll from "./page/Documentation/ViewDocumentation"
+import DocumentConfiguration from "./page/Documentation/DocumentConfiguration"
 
 
 export default function App() {
@@ -17,11 +28,22 @@ export default function App() {
         <Sidebar className="ml-10" />  
         <div className="flex-1 p-4">
           <Routes>
-            <Route index element={<DashBoard />} />
-           <Route path="/equipment" element={<Equipment />} />
+            <Route path='/' element={<DashBoard />} />
             <Route path="/equipment/view" element={<EquipmentView />} />
             <Route path="/equipment/categories" element={<EquipmentCategories />} />
-            <Route path="/Maintenance" element={<PreventiveMaintenance />} />
+            <Route path="/Maintenance-Requests" element={<Maintenace/>} />
+            <Route path="/Preventive-Maintenace" element={<PreventiveMaintenance />} />
+            <Route path="/safety" element={<Safety/>} />
+            <Route path="/team/user-management" element={<UserManagement/>} />
+            <Route path="/team/team-management" element={<TeamManagement/>} />
+            <Route path="/team/training" element={<Training/>} />
+            <Route path="/production/area-management" element={<AreaOperation/>} />
+            <Route path="/production/operation-setup" element={<OperationSetup/>} />
+            <Route path="/parts/view-all" element={<PartsViewAll/>} />
+            <Route path="/parts/configurations" element={<PartConfiguration/>} />
+            <Route path="/suppliers/view-all" element={<SuppliersViewAll/>} />
+            <Route path="/documents/view-all" element={<DocumentViewAll/>} />
+            <Route path="/documents/configurations" element={<DocumentConfiguration/>} />
           </Routes>
         </div>
       </div>
