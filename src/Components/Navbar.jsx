@@ -1,36 +1,30 @@
-// components/Navbar.js
 import React from 'react';
-import { Settings,Bell,Search , CircleQuestionMark , ArrowLeft} from 'lucide-react';
-const Navbar = () => {
-  return (
+import { Settings, Bell, Search, CircleQuestionMark, ArrowLeft } from 'lucide-react';
 
-    <>
-    <nav className="navbar">
-      <div className="navbar-content">
+const Navbar = ({ sidebarContent, setSidebarContent }) => {
+  const handleSettingsClick = () => {
+    
+    setSidebarContent(sidebarContent === 'settings' ? null : 'settings');
+  };
+
+  return (
+    <nav className="navbar bg-gray-100 p-4 flex justify-between items-center">
+      <div className="flex items-center gap-4">
         <h1>Company Name</h1>
-        <div className='BackIcon' onClick={() => window.history.back()}>
+        <div className='BackIcon cursor-pointer' onClick={() => window.history.back()}>
           <ArrowLeft strokeWidth={1} />
         </div>
-        <div className="navbar-user flex items-center gap-4">
-            <div>
-                <CircleQuestionMark strokeWidth={1} />
-            </div>
-            <div>
-                <Search strokeWidth={1} />
-            </div>
-            <div>
-                <Bell strokeWidth={1} />
-            </div>
-            <div>
-                <Settings strokeWidth={1} />
-            </div>
-            <img src="#" className='w-10 h-10 rounded-full border-1 border-black' />
-        </div>
+      </div>
+
+      <div className="navbar-user flex items-center gap-4">
+        <CircleQuestionMark strokeWidth={1} />
+        <Search strokeWidth={1} />
+        <Bell strokeWidth={1} />
+        <Settings strokeWidth={1} onClick={handleSettingsClick} />
+        <img src="#" alt="user" className='w-10 h-10 rounded-full border border-black' />
       </div>
     </nav>
-    </>
   );
 };
 
 export default Navbar;
-

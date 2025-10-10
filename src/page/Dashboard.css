@@ -1,0 +1,144 @@
+/* Scope */
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  color: #0f172a;
+  padding-bottom: 24px;
+}
+
+/* Header */
+.db-header {
+  padding: 12px 12px 8px;
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.db-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Grid */
+.db-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 20px;
+  padding: 16px 12px 0;
+}
+
+.db-col {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+/* Card */
+.db-card {
+  border: 1px solid #9a9a9a;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.db-card-title {
+  text-align: center;
+  font-weight: 700;
+  padding: 10px 10px 0;
+  font-size: 1.1rem;
+}
+
+.db-card-body {
+  padding: 10px 12px 14px;
+}
+
+/* Metric table */
+.db-metric-table table,
+.equip-table table,
+.tasks-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px; /* spacing between rows for the "pill" look */
+}
+
+.db-metric-table th,
+.equip-table th,
+.tasks-table th {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.db-metric-table th.left,
+.equip-table th.left,
+.tasks-table th.left,
+.db-metric-table td.left,
+.equip-table td.left,
+.tasks-table td.left {
+  text-align: left;
+}
+
+.db-metric-table td,
+.equip-table td,
+.tasks-table td {
+  padding: 6px 8px;
+  vertical-align: middle;
+}
+
+/* Gray metric cells */
+.db-metric-table td.cell,
+.equip-table td.cell {
+  background: #ebedf0;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 64px;
+}
+
+/* Equipment table specifics */
+.equip-table .priority {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prio-text {
+  min-width: 30px;
+  display: inline-block;
+}
+
+/* Dots */
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green { background: #22c55e; }
+
+/* Tasks table */
+.tasks-table .icon-col {
+  width: 32px;
+}
+.icon-cell {
+  text-align: center;
+}
+.check-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #8f8f8f;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #4b5563;
+  background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .db-grid {
+    grid-template-columns: 1fr;
+  }
+}

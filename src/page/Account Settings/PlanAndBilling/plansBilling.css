@@ -1,0 +1,252 @@
+/* Scope all styles to this page */
+.plans-billing {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* Neutralize any global button styles from elsewhere */
+.plans-billing button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Header */
+.pb-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.pb-header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Grid layout */
+.pb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 16px;
+}
+
+.pb-left {
+  padding-right: 16px;
+  border-right: 1px solid #dcdcdc;
+}
+
+.pb-right {
+  padding-left: 16px;
+}
+
+.pb-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 4px 0 12px;
+}
+
+/* Plan card */
+.pb-plan-card {
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.pb-plan-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Plan options */
+.pb-plan-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.pb-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+}
+
+.pb-option input[type="radio"] {
+  margin-top: 4px;
+}
+
+.pb-option-text {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pb-option-label {
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.pb-price {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.pb-price em {
+  font-style: normal;
+  color: #8a8a8a;
+  font-weight: 500;
+}
+
+/* Features list */
+.pb-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.pb-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 2px;
+  font-size: 0.95rem;
+}
+
+/* Right side - billing */
+.pb-right-section {
+  margin-bottom: 22px;
+}
+
+.pb-block-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pb-block-title.with-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* History list */
+.pb-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pb-history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+.pb-history-main {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.pb-history-date {
+  color: #111;
+}
+
+.pb-history-product {
+  color: #444;
+}
+
+.pb-history-amount {
+  font-weight: 800;
+}
+
+/* Icon buttons (download, more) */
+.icon-btn {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.icon-btn:hover {
+  background: #f1f1f1;
+}
+
+/* Payment method card */
+.pb-card-on-file {
+  display: grid;
+  grid-template-columns: 130px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 380px;
+  background: #fff;
+}
+
+.pb-card-brand {
+  width: 120px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #cfd6e6;
+  background: linear-gradient(180deg, #cfe0ff 0%, #9dbbf5 100%);
+  color: #0a2e73;
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  display: grid;
+  place-items: center;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.pb-card-digits {
+  font-weight: 600;
+  color: #333;
+}
+
+.pb-card-exp {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .pb-grid {
+    grid-template-columns: 1fr;
+  }
+  .pb-left {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 16px;
+    margin-bottom: 12px;
+  }
+  .pb-right {
+    padding-left: 0;
+  }
+  .pb-card-on-file {
+    width: 100%;
+    grid-template-columns: 120px 1fr auto;
+  }
+}
