@@ -1,0 +1,202 @@
+/* Overlay + modal */
+.scd-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.25);
+  display: grid; place-items: center;
+  z-index: 50;
+}
+.scd-modal {
+  width: 520px;
+  background: #fff;
+  color: #0f172a;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.18);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+/* Header */
+.scd-header {
+  position: relative;
+  padding: 12px 14px 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.scd-subtitle {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+.scd-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+.scd-close {
+  position: absolute;
+  right: 10px; top: 10px;
+  width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Body */
+.scd-body { padding: 12px 14px; }
+
+.scd-grid {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  column-gap: 12px;
+  row-gap: 8px;
+}
+.scd-grid > label {
+  font-weight: 800;
+  align-self: center;
+}
+.scd-value { align-self: center; }
+
+.scd-select, .scd-textarea, .scd-composer input {
+  width: 100%;
+  border: 1px solid #cfd2d7;
+  border-radius: 6px;
+  background: #fff;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.scd-textarea { resize: vertical; }
+
+/* Checkbox lists */
+.scd-checkcol { display: grid; gap: 6px; }
+.scd-check { display: inline-flex; align-items: center; gap: 8px; }
+.scd-check input { width: 16px; height: 16px; }
+
+/* Hint under textarea */
+.scd-hint { margin-top: 6px; font-size: 12px; color: #6b7280; }
+
+/* Composer */
+.scd-composer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin-top: 12px;
+}
+.scd-share {
+  border: 1px solid #2b5fbf;
+  background: #2b5fbf;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Footer */
+.scd-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 10px 14px;
+  border-top: 1px solid #e5e7eb;
+  background: #fafafa;
+}
+.scd-btn {
+  border: 1px solid #cfd2d7;
+  background: #fff;
+  color: #111827;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.scd-btn.primary { background: #2b5fbf; border-color: #2b5fbf; color: #fff; }
+.scd-btn.ghost { background: #fff; }
+
+/* Responsive */
+@media (max-width: 560px) {
+  .scd-modal { width: 94vw; }
+  .scd-grid { grid-template-columns: 1fr; }
+}
+
+/* Overlay on top of the app */
+.scd-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* not fully black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* make sure it's above everything */
+}
+
+/* White modal card */
+.scd-modal {
+  width: 540px;
+  max-width: 94vw;
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 60px rgba(0,0,0,.18);
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+/* Header */
+.scd-header {
+  position: relative;
+  padding: 12px 14px 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.scd-subtitle { font-size: 12px; color: #6b7280; margin-bottom: 4px; }
+.scd-title { font-size: 18px; font-weight: 800; }
+.scd-close {
+  position: absolute;
+  right: 10px; top: 10px;
+  width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border: 1px solid #e5e7eb; background: #fff; border-radius: 8px; cursor: pointer;
+}
+
+/* Body */
+.scd-body { padding: 12px 14px; }
+.scd-grid {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  column-gap: 12px; row-gap: 8px;
+}
+.scd-grid > label { font-weight: 800; align-self: center; }
+.scd-value { align-self: center; }
+
+.scd-select, .scd-textarea, .scd-composer input {
+  width: 100%; border: 1px solid #cfd2d7; border-radius: 6px; background: #fff;
+  padding: 6px 10px; font-size: 14px;
+}
+.scd-textarea { resize: vertical; }
+
+.scd-checkcol { display: grid; gap: 6px; }
+.scd-check { display: inline-flex; align-items: center; gap: 8px; }
+.scd-check input { width: 16px; height: 16px; }
+
+.scd-hint { margin-top: 6px; font-size: 12px; color: #6b7280; }
+
+/* Composer + footer */
+.scd-composer { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: 12px; }
+.scd-share { border: 1px solid #2b5fbf; background: #2b5fbf; color: #fff; border-radius: 6px; padding: 6px 12px; font-weight: 700; cursor: pointer; }
+
+.scd-footer {
+  display: flex; justify-content: flex-end; gap: 8px;
+  padding: 10px 14px; border-top: 1px solid #e5e7eb; background: #fafafa;
+}
+.scd-btn { border: 1px solid #cfd2d7; background: #fff; color: #111827; border-radius: 6px; padding: 6px 12px; font-weight: 600; cursor: pointer; }
+.scd-btn.primary { background: #2b5fbf; border-color: #2b5fbf; color: #fff; }
+.scd-btn.ghost { background: #fff; }
+
+/* Optional: prevent clicks on modal from closing it if you use overlay click-to-close */
+.scd-modal { pointer-events: auto; }
+
+/* Responsive */
+@media (max-width: 560px) {
+  .scd-grid { grid-template-columns: 1fr; }
+}

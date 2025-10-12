@@ -4,7 +4,7 @@ import { Settings, Bell, Search, CircleQuestionMark, ArrowLeft } from 'lucide-re
 const Navbar = ({ sidebarContent, setSidebarContent }) => {
   const handleSettingsClick = () => {
     
-    setSidebarContent(sidebarContent === 'settings' ? null : 'settings');
+    setSidebarContent(sidebarContent === 'settings' ? 'menu' : 'settings');
   };
 
   return (

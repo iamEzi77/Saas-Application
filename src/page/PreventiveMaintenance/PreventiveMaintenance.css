@@ -1,0 +1,85 @@
+/* Scope */
+.pm-page { background: #fff; color: #111827; min-height: 100vh; }
+.pm-main { max-width: 1100px; margin: 0 auto; padding: 10px 12px 80px; }
+
+/* Title */
+.pm-title { text-align: center; font-weight: 800; margin: 6px 0 12px; }
+
+/* Summary box */
+.pm-summary {
+  margin: 0 auto 12px;
+  max-width: 560px;
+  border: 1px solid #9aa0a6;
+  border-radius: 10px;
+  padding: 8px;
+  background: #fff;
+}
+.pm-summary table { width: 100%; border-collapse: separate; border-spacing: 0 8px; }
+.pm-summary thead th { text-align: center; font-weight: 800; padding: 6px 8px; }
+.pm-summary .left { text-align: left; }
+.pm-summary .heading { font-weight: 700; }
+.pm-summary .cell {
+  background: #ebedf0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+/* Table */
+.pm-table-wrap { margin-top: 8px; }
+.pm-table { width: 100%; border-collapse: separate; border-spacing: 0 8px; }
+.pm-table thead th { text-align: left; font-weight: 700; padding: 6px 8px; }
+.pm-table tbody td { padding: 8px 8px; vertical-align: middle; }
+.pm-table .cell { background: #ebedf0; border-radius: 6px; }
+.row-link { cursor: pointer; }
+.row-link:hover { background: #fafafa; }
+
+/* Equipment with dot */
+.pm-equip { display: inline-flex; align-items: center; gap: 8px; }
+.pm-dot { width: 14px; height: 14px; border-radius: 999px; border: 1px solid rgba(0,0,0,.1); display: inline-block; }
+.pm-dot.red { background: #ef4444; }
+.pm-dot.yellow { background: #f59e0b; }
+.pm-dot.green { background: #22c55e; }
+
+/* Small action buttons on right */
+.pm-icon-btn {
+  width: 24px; height: 24px; display: inline-grid; place-items: center;
+  border: 1px solid #cfd2d7; border-radius: 999px; background: #fff; color: #111827;
+  margin-left: 6px;
+}
+.pm-actions { display: flex; justify-content: flex-end; }
+
+/* FAB */
+.pm-fab {
+  position: fixed; right: 18px; bottom: 18px;
+  width: 56px; height: 56px; border-radius: 999px;
+  border: 1px solid #cfd2d7; background: #fff;
+  display: grid; place-items: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+/* Pagination (blue bar) */
+.pgm { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0 0; }
+.pgm-left { display: flex; align-items: center; gap: 12px; background: #2b5fbf; color: #fff; padding: 8px 12px; border-radius: 8px; }
+.pgm-left-title { font-weight: 700; }
+.pgm-select-wrap { position: relative; display: inline-flex; align-items: center; }
+.pgm-select-wrap select { appearance: none; background: #fff; color: #111827; border: 1px solid #e5e7eb; border-radius: 6px; padding: 4px 26px 4px 10px; font-weight: 700; min-width: 54px; cursor: pointer; }
+.pgm-caret { position: absolute; right: 8px; color: #111827; font-size: 12px; pointer-events: none; }
+.pgm-range { display: inline-flex; align-items: center; gap: 8px; }
+.pgm-badge { background: #1e40af; color: #fff; padding: 4px 8px; border-radius: 6px; font-weight: 800; }
+.pgm-left-text { opacity: 0.95; }
+.pgm-right { display: flex; align-items: center; gap: 8px; }
+.pgm-nav { border: 1px solid #e5e7eb; background: #fff; color: #1e40af; border-radius: 6px; padding: 6px 10px; font-weight: 700; cursor: pointer; }
+.pgm-nav.disabled, .pgm-nav:disabled { background: #f3f4f6; border-color: #e5e7eb; color: #9ca3af; cursor: not-allowed; }
+.pgm-pages { display: inline-flex; gap: 4px; }
+.pgm-page { min-width: 28px; height: 28px; padding: 0 8px; border: 1px solid #2b5fbf; background: #fff; color: #2b5fbf; border-radius: 4px; font-weight: 800; cursor: pointer; }
+.pgm-page.active { background: #1e40af; border-color: #1e40af; color: #fff; }
+.pgm-next { background: transparent; border: none; color: #1e40af; font-weight: 800; padding: 6px 6px; cursor: pointer; text-decoration: underline; }
+.pgm-next.disabled, .pgm-next:disabled { color: #9ca3af; text-decoration: none; cursor: not-allowed; }
+
+/* Responsive */
+@media (max-width: 820px) {
+  .pm-summary { max-width: 100%; }
+  .pgm { flex-direction: column; align-items: stretch; gap: 10px; }
+  .pgm-left { justify-content: space-between; flex-wrap: wrap; }
+}

@@ -133,3 +133,55 @@
   background: transparent; border: none; color: #2563eb; cursor: pointer;
 }
 .muted { color: #6b7280; }
+
+.eq-round-btn.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Edit bar (shown only while editing) */
+.eq-editbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0 10px;
+}
+.flex-spacer { flex: 1; }
+
+.eq-btn {
+  border: 1px solid #cfd2d7;
+  background: #fff;
+  color: #111827;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+.eq-btn.primary { background: #2b5fbf; border-color: #2b5fbf; color: #fff; }
+.eq-btn.ghost { background: #fff; }
+.eq-btn.outline { border-color: #9aa0a6; }
+
+/* Inputs inside editable cells */
+.eq-input {
+  width: 100%;
+  border: 1px solid #cfd2d7;
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: #fff;
+}
+
+/* Small action buttons */
+.eq-icon-btn {
+  width: 24px; height: 24px;
+  display: inline-grid; place-items: center;
+  border: 1px solid #cfd2d7; border-radius: 999px; background: #fff;
+  color: #111827; margin-left: 6px;
+}
+.eq-actions { display: flex; justify-content: flex-end; }
+
+/* Doc type / highlight */
+.eq-doc-type { display: inline-block; font-size: 12px; line-height: 1; padding: 4px 6px; border-radius: 4px; background: #ef4444; color: #fff; font-weight: 700; }
+.eq-highlight { display: inline-block; background: #fff3a3; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
+.ml8 { margin-left: 8px; }
