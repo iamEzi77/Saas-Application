@@ -1,0 +1,89 @@
+/* Training Matrix layout */
+.tmx-header {
+  padding: 10px 12px;
+  border-bottom: 1px solid #a6a6a6;
+}
+.tmx-header h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.tmx-wrap {
+  padding: 12px;
+  overflow-x: auto;
+}
+
+/* Table */
+.tmx-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 520px;
+  border: 1px solid #cfd2d7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tmx-table thead th {
+  background: #f8fafc;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 800;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+.tmx-table th.left { text-align: left; }
+.tmx-table th.center { text-align: center; }
+
+.tmx-table tbody td {
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+  padding: 6px 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+.tmx-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.tmx-table tbody td:last-child {
+  border-right: none;
+}
+
+/* Sticky first column for user names (optional) */
+.sticky-col {
+  position: sticky;
+  left: 0;
+  background: #ffffff;
+  z-index: 1;
+  border-right: 1px solid #e5e7eb;
+}
+
+/* User name tag (green pill) */
+.tmx-user-tag {
+  display: inline-block;
+  background: #22c55e; /* green-500 */
+  color: #fff;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Cell statuses */
+.tmx-cell.ok {
+  background: #d1fae5; /* light emerald */
+  font-weight: 700;
+  border-radius: 4px;
+}
+.tmx-cell.warn {
+  background: #fef3c7; /* light amber */
+  font-weight: 700;
+  border-radius: 4px;
+}
+.tmx-cell.empty {
+  color: #9ca3af;
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .tmx-table { min-width: 640px; }
+}
